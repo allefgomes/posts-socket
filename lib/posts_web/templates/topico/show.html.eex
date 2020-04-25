@@ -1,0 +1,20 @@
+<h1>Show Topico</h1>
+<span><%= link "Edit", to: Routes.topico_path(@conn, :edit, @topico) %></span>
+<span><%= link "Back", to: Routes.topico_path(@conn, :index) %></span>
+<ul>
+  <li>
+    <strong>Nome:</strong>
+    <%= @topico.nome %>
+  </li>
+</ul>
+
+<textarea></textarea>
+<button>Acessar WS</button>
+
+<ul class="comentarios"></ul>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    window.createSocket(<%= @topico.id %>)
+  });
+</script>

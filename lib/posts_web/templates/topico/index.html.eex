@@ -1,0 +1,26 @@
+<h1>Listing Topicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for topico <- @topicos do %>
+    <tr>
+      <td><%= topico.nome %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.topico_path(@conn, :show, topico) %></span>
+        <span><%= link "Edit", to: Routes.topico_path(@conn, :edit, topico) %></span>
+        <span><%= link "Delete", to: Routes.topico_path(@conn, :delete, topico), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Topico", to: Routes.topico_path(@conn, :new) %></span>

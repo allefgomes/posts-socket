@@ -1,0 +1,5 @@
+<h1>Edit Topico</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.topico_path(@conn, :update, @topico)) %>
+
+<span><%= link "Back", to: Routes.topico_path(@conn, :index) %></span>
