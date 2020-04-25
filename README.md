@@ -1,5 +1,8 @@
 # Posts
+Projeto criado para aprendizado sobre websocket no phoenix framework.
+Este projeto foi uma programação junto do criador do canal: Gustavo Oliveira -> https://www.youtube.com/user/guuhsnt
 
+## To run
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
